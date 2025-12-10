@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Datos Bancarios Jesimoda</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("logo_plateado.png");
+        background-size: 180px;
+        background-repeat: repeat;
+        margin: 0;
+        padding-top: 90px; /* espacio para nav fijo */
+    }
+
+    /* ---------------- NAV SUPERIOR ---------------- */
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-content {
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+        text-shadow: 0 1px 0 white;
+    }
+
+    .icon-btn {
+        background: linear-gradient(145deg, #d9d9d9, #f2f2f2, #bfbfbf);
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        box-shadow:
+            2px 2px 4px rgba(0,0,0,0.25),
+            inset -2px -2px 4px rgba(255,255,255,0.9),
+            inset 2px 2px 4px rgba(0,0,0,0.15);
+        transition: 0.2s;
+    }
+
+    .icon-btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(145deg, #eeeeee, #ffffff, #cccccc);
+    }
+
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* ---------------- TARJETAS ---------------- */
+    .card {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(4px);
+        padding: 20px;
+        margin: 15px auto;
+        width: 95%;
+        max-width: 450px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .item {
+        margin-bottom: 12px;
+        padding: 10px;
+        background: #f8f8f8;
+        border-radius: 8px;
+        border: 1px solid #dcdcdc;
+    }
+
+    .label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #444;
+    }
+
+    /* ---------------- BOTONES PLATEADOS ---------------- */
+    button {
+        margin-top: 6px;
+        padding: 10px 12px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #222;
+        background: linear-gradient(145deg, #d9d9d9, #f2f2f2, #bfbfbf);
+        box-shadow:
+            2px 2px 4px rgba(0,0,0,0.25),
+            inset -2px -2px 4px rgba(255,255,255,0.9),
+            inset 2px 2px 4px rgba(0,0,0,0.15);
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: linear-gradient(145deg, #e4e4e4, #ffffff, #cfcfcf);
+        transform: scale(1.02);
+    }
+
+    button:active {
+        background: linear-gradient(145deg, #cfcfcf, #e6e6e6, #b1b1b1);
+        transform: scale(0.98);
+    }
+</style>
+
+<script>
+function copiar(texto) {
+    navigator.clipboard.writeText(texto);
+    alert("Copiado: " + texto);
+}
+</script>
+
+</head>
+<body>
+
+<!-- ---------------- NAV SUPERIOR ---------------- -->
+<div class="nav">
+    <div class="nav-content">
+
+        <div class="nav-title">JESIMODA</div>
+
+        <a class="icon-btn" href="https://www.instagram.com/jesi_moda_store/" target="_blank">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+        </a>
+
+        <a class="icon-btn" href="https://www.tiktok.com/@jesi_moda" target="_blank">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+        </a>
+
+        <a class="icon-btn" href="https://wa.me/56926212626" target="_blank">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        </a>
+
+        <a class="icon-btn" href="https://web.facebook.com/marketplace/profile/100095178046600/?locale=es_LA" target="_blank">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        </a>
+
+    </div>
+</div>
+
+<!-- ---------------- CONTENIDO ---------------- -->
+
+<div class="card">
+    <h2>Banco Estado</h2>
+
+    <div class="item">
+        <span class="label">Nombre</span>
+        JESIMODA SPA
+        <button onclick="copiar('JESIMODA SPA')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">RUT</span>
+        15.300.951-1
+        <button onclick="copiar('15.300.951-1')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Banco</span>
+        Banco Estado
+        <button onclick="copiar('Banco Estado')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Tipo de cuenta</span>
+        Corriente
+        <button onclick="copiar('Corriente')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Número de cuenta</span>
+        82500046101
+        <button onclick="copiar('82500046101')">Copiar</button>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Mercado Pago</h2>
+
+    <div class="item">
+        <span class="label">Nombre</span>
+        JESIMODA SPA
+        <button onclick="copiar('JESIMODA SPA')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">RUT</span>
+        15.300.951-1
+        <button onclick="copiar('15.300.951-1')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Banco</span>
+        Mercado Pago
+        <button onclick="copiar('Mercado Pago')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Tipo de cuenta</span>
+        Vista
+        <button onclick="copiar('Vista')">Copiar</button>
+    </div>
+
+    <div class="item">
+        <span class="label">Número de cuenta</span>
+        1015138566
+        <button onclick="copiar('1015138566')">Copiar</button>
+    </div>
+</div>
+
+</body>
+</html>
